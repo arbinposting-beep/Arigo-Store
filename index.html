@@ -3,51 +3,123 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101014">
-<title>ARIGO RECARGAS | Free Fire</title>
+<meta name="theme-color" content="#0b0f0c">
+<title>ARIGO STORE | Diamantes Free Fire</title>
 <style>
-:root{--bg:#0d0d11;--panel:#17171e;--panel2:#20202a;--red:#ed2638;--muted:#a8a8b3;--white:#f7f7fb}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 0%,#3b1119 0,transparent 32%),var(--bg);color:var(--white);font-family:Inter,system-ui,Arial,sans-serif}
-.wrap{max-width:980px;margin:auto;padding:20px}.nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0 22px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:2px;font-size:23px}.mark{background:var(--red);width:38px;height:38px;display:grid;place-items:center;border-radius:11px;font-size:24px;font-weight:900}.tag{font-size:11px;color:#ff9ca5;border:1px solid #70232d;border-radius:99px;padding:7px 10px}
-.hero{padding:32px 24px;border:1px solid #33313b;border-radius:22px;background:linear-gradient(120deg,#21151b,#17171e 58%,#241016);overflow:hidden}.eyebrow{color:#ff7b88;font-weight:800;font-size:12px;letter-spacing:2px}.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.02;margin:12px 0}.hero p{color:#c5c3cc;max-width:520px;line-height:1.6}.hero .diamond{font-size:46px;float:right;margin:10px 4% 0 10px;filter:drop-shadow(0 8px 18px #007cff66)}
-.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:18px}.panel{background:var(--panel);border:1px solid #2e2d37;border-radius:18px;padding:20px}.panel h2{font-size:18px;margin:0 0 16px}.field{margin:13px 0}.field label{display:block;font-size:13px;color:#d9d8df;margin-bottom:8px}.field input{width:100%;padding:14px;border-radius:11px;border:1px solid #3a3944;background:#101016;color:white;font-size:16px;outline:none}.field input:focus{border-color:var(--red)}.packs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.pack{background:var(--panel2);border:1px solid #383742;border-radius:13px;padding:14px;text-align:left;color:white;cursor:pointer}.pack strong{display:block;font-size:16px}.pack small{display:block;color:#aaa8b3;margin-top:6px}.pack.selected{border:1px solid var(--red);background:#35151c;box-shadow:0 0 0 1px #ed263844}.btn{width:100%;border:0;background:var(--red);color:white;padding:15px;border-radius:12px;font-weight:800;font-size:15px;cursor:pointer;margin-top:14px}.btn:disabled{opacity:.45;cursor:not-allowed}.hint{font-size:12px;color:var(--muted);line-height:1.5}.summary{background:#101016;border-radius:12px;padding:14px;margin:14px 0}.line{display:flex;justify-content:space-between;gap:12px;margin:9px 0;color:#c8c6d0;font-size:14px}.line.total{border-top:1px solid #35333d;padding-top:12px;color:white;font-weight:800;font-size:17px}.notice{display:none;padding:12px;border-radius:10px;background:#17291f;color:#a9efbf;font-size:13px;margin-top:12px}.footer{text-align:center;color:#777681;font-size:12px;padding:24px 0}.warning{color:#f2c2c6}
-@media(max-width:700px){.grid{grid-template-columns:1fr}.hero{padding:25px 19px}.wrap{padding:14px}.panel{padding:17px}}
+:root{--bg:#0b0b10;--surface:#15151d;--surface2:#1d1d27;--line:#30303b;--red:#19c878;--red2:#087b49;--white:#f7f7fb;--muted:#a6a6b2;--green:#9be6b0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 85% -10%,#073b29 0,transparent 38%),var(--bg);color:var(--white);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1080px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;z-index:5;background:#0b0b10eF;backdrop-filter:blur(14px);border-bottom:1px solid #292832}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-size:22px;font-weight:950;letter-spacing:1.8px}.logo{height:40px;width:40px;border-radius:12px;background:linear-gradient(145deg,#36e69a,#087b49);display:grid;place-items:center;font-size:25px;font-weight:950;box-shadow:0 7px 24px #19c87833}.navright{display:flex;align-items:center;gap:18px;color:#d2d0d8;font-size:13px}.pill{border:1px solid #285c43;color:#8af2bd;padding:8px 12px;border-radius:99px;font-size:11px;font-weight:800;letter-spacing:.8px}
+.hero{margin:26px 0 20px;padding:clamp(25px,5vw,52px);border:1px solid #3b3038;border-radius:25px;background:linear-gradient(115deg,#10251d,#17151d 58%,#102b20);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:240px;height:240px;border-radius:50%;right:-75px;top:-80px;background:#19c8781c;filter:blur(4px)}.heroContent{position:relative;z-index:1;max-width:660px}.eyebrow{color:#70f0b5;font-size:11px;font-weight:900;letter-spacing:2.5px}.hero h1{font-size:clamp(34px,6vw,58px);line-height:.99;letter-spacing:-1.7px;margin:15px 0}.hero p{color:#c7c3ce;line-height:1.7;max-width:570px;margin:0}.heroGem{position:absolute;right:9%;top:25%;font-size:clamp(60px,10vw,105px);filter:drop-shadow(0 10px 30px #168bff55);transform:rotate(-9deg)}
+.sectionTitle{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:30px 0 14px}.sectionTitle h2{font-size:21px;margin:0}.sectionTitle p{font-size:12px;color:var(--muted);margin:5px 0 0}.layout{display:grid;grid-template-columns:1.15fr .85fr;gap:17px}.card{background:linear-gradient(180deg,#191922,#14141b);border:1px solid var(--line);border-radius:19px;padding:21px}.step{display:inline-grid;place-items:center;width:27px;height:27px;border-radius:9px;background:#123b2b;color:#8af2bd;font-weight:900;font-size:12px;margin-right:8px}
+label{display:block;font-size:13px;color:#dedce4;margin:16px 0 8px}.input{width:100%;padding:15px 14px;border:1px solid #3b3a46;border-radius:12px;background:#0e0e14;color:white;font-size:16px;outline:none}.input:focus{border-color:var(--red);box-shadow:0 0 0 3px #ef30451c}.helper{font-size:11px;color:var(--muted);line-height:1.55;margin:9px 0 0}
+.packages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:14px}.pack{border:1px solid #393844;background:#20202a;border-radius:14px;padding:15px;text-align:left;color:white;cursor:pointer;transition:.18s}.pack:hover{transform:translateY(-2px);border-color:#27875b}.pack.active{background:linear-gradient(145deg,#123b29,#14271e);border-color:var(--red);box-shadow:0 0 0 1px #19c87844}.packTop{display:flex;align-items:center;justify-content:space-between;gap:8px}.gem{font-size:21px}.pack strong{font-size:15px}.pack .price{display:block;color:#8af2bd;font-weight:800;margin-top:9px;font-size:13px}.pack small{display:block;color:#a9a7b2;margin-top:4px;font-size:11px}
+.summary{background:#0e0e14;border:1px solid #292832;border-radius:14px;padding:15px;margin:14px 0}.row{display:flex;justify-content:space-between;gap:12px;margin:11px 0;color:#c7c5cf;font-size:13px}.row strong{color:#fff;text-align:right}.row.total{border-top:1px solid #34333d;padding-top:13px;font-size:17px;font-weight:900}.row.total strong{color:#8af2bd}.btn{width:100%;border:0;border-radius:12px;padding:15px 16px;background:linear-gradient(100deg,#20d486,#087b49);color:white;font-weight:900;font-size:14px;cursor:pointer;box-shadow:0 8px 24px #19c8782a}.btn:active{transform:scale(.99)}.btn.secondary{background:#252530;border:1px solid #42414d;box-shadow:none;margin-top:9px}.status{display:none;padding:12px;border-radius:11px;background:#17281e;color:var(--green);font-size:12px;line-height:1.5;margin-top:12px}.demo{display:flex;gap:9px;align-items:flex-start;background:#2b1b20;border:1px solid #285c43;color:#c4f5d8;padding:12px;border-radius:12px;font-size:11px;line-height:1.5;margin-top:13px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:17px 0}.feature{background:#15151d;border:1px solid #2d2c36;border-radius:15px;padding:16px}.feature b{display:block;font-size:13px;margin:7px 0}.feature span{font-size:11px;color:var(--muted);line-height:1.5}.faq{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin:14px 0 28px}.faq details{background:#15151d;border:1px solid #2d2c36;border-radius:13px;padding:14px}.faq summary{font-size:13px;font-weight:800;cursor:pointer}.faq p{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:0}
+footer{border-top:1px solid #282731;padding:22px 0 30px;color:#777681;text-align:center;font-size:11px}.footbrand{color:#e8e6ed;font-weight:900;letter-spacing:1px}
+@media(max-width:760px){.wrap{padding:0 14px}.layout{grid-template-columns:1fr}.heroGem{right:5%;top:22%;opacity:.8}.heroContent{max-width:80%}.features{grid-template-columns:1fr}.faq{grid-template-columns:1fr}.navright .navlink{display:none}.card{padding:17px}.sectionTitle{margin-top:25px}}
+@media(max-width:390px){.brand{font-size:18px}.pill{font-size:9px;padding:7px 9px}.heroContent{max-width:100%}.heroGem{opacity:.22}.packages{gap:8px}.pack{padding:12px}.pack strong{font-size:13px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header class="nav"><div class="brand"><span class="mark">A</span> ARIGO</div><span class="tag">RECARGAS FREE FIRE</span></header>
-<section class="hero"><span class="diamond">💎</span><div class="eyebrow">TU TIENDA GAMING</div><h1>RECARGA TUS<br>DIAMANTES</h1><p>Elige tu paquete, ingresa tu ID de jugador y revisa tu pedido. Estamos preparando nuestro sistema de recargas.</p></section>
-<div class="grid">
-<section class="panel">
-<h2>1. Datos del jugador</h2>
-<div class="field"><label for="player">ID de jugador de Free Fire</label><input id="player" inputmode="numeric" maxlength="20" placeholder="Ejemplo: 123456789"></div>
-<p class="hint">Ingresa únicamente tu ID de jugador. Nunca compartas tu contraseña ni códigos de acceso.</p>
-<h2 style="margin-top:24px">2. Selecciona tus diamantes</h2>
-<div class="packs" id="packs">
-<button class="pack selected" data-name="100 diamantes" data-price="0"><strong>💎 100 diamantes</strong><small>Precio por configurar</small></button>
-<button class="pack" data-name="310 diamantes" data-price="0"><strong>💎 310 diamantes</strong><small>Precio por configurar</small></button>
-<button class="pack" data-name="520 diamantes" data-price="0"><strong>💎 520 diamantes</strong><small>Precio por configurar</small></button>
-<button class="pack" data-name="1060 diamantes" data-price="0"><strong>💎 1060 diamantes</strong><small>Precio por configurar</small></button>
+<header><div class="wrap nav"><a class="brand" href="#"><span class="logo">A</span><span>ARIGO STORE</span></a><div class="navright"><a class="navlink" href="#recargas">Recargas</a><a class="navlink" href="#como-funciona">Cómo funciona</a><a class="navlink" href="#admin">Administrador</a><span class="pill">FREE FIRE</span></div></div></header>
+<main class="wrap">
+<section class="hero"><div class="heroContent"><div class="eyebrow">TU TIENDA GAMING</div><h1>RECARGA TUS<br>DIAMANTES</h1><p>Elige tu paquete de diamantes y prepara tu pedido en pocos pasos. Una experiencia sencilla, rápida y pensada para jugadores.</p></div><div class="heroGem" aria-hidden="true">💎</div></section>
+<div class="sectionTitle" id="recargas"><div><h2>Compra tus diamantes</h2><p>Selecciona un paquete para ver el resumen de tu pedido.</p></div></div>
+<div class="layout">
+<section class="card">
+<h3><span class="step">1</span>Datos del jugador</h3>
+<label for="player">ID de jugador de Free Fire</label><input class="input" id="player" inputmode="numeric" autocomplete="off" maxlength="20" placeholder="Ejemplo: 123456789">
+<p class="helper">Escribe tu ID correctamente. Nunca solicitaremos tu contraseña ni códigos de acceso.</p>
+<h3 style="margin:25px 0 0"><span class="step">2</span>Elige tu paquete</h3>
+<div class="packages" id="packages">
+<button class="pack active" data-name="100 diamantes" data-price="0"><span class="packTop"><span class="gem">💎</span><strong>100 diamantes</strong></span><span class="price">Precio por configurar</span><small>Paquete básico</small></button>
+<button class="pack" data-name="310 diamantes" data-price="0"><span class="packTop"><span class="gem">💎</span><strong>310 diamantes</strong></span><span class="price">Precio por configurar</span><small>Paquete popular</small></button>
+<button class="pack" data-name="520 diamantes" data-price="0"><span class="packTop"><span class="gem">💎</span><strong>520 diamantes</strong></span><span class="price">Precio por configurar</span><small>Para seguir jugando</small></button>
+<button class="pack" data-name="1060 diamantes" data-price="0"><span class="packTop"><span class="gem">💎</span><strong>1060 diamantes</strong></span><span class="price">Precio por configurar</span><small>Paquete grande</small></button>
 </div>
 </section>
-<aside class="panel">
-<h2>Resumen del pedido</h2>
-<div class="summary"><div class="line"><span>Paquete</span><strong id="chosen">100 diamantes</strong></div><div class="line"><span>ID jugador</span><strong id="shownId">Pendiente</strong></div><div class="line total"><span>Total</span><strong id="total">Por configurar</strong></div></div>
-<p class="hint warning">Modo de demostración: todavía no se reciben pagos ni se realizan recargas reales.</p>
-<button class="btn" id="order">Revisar pedido</button><div class="notice" id="notice"></div>
-<p class="hint">Cuando conectemos un proveedor reseller legítimo y un medio de pago, habilitaremos las compras reales y la entrega automática.</p>
+<aside class="card">
+<h3><span class="step">3</span>Resumen del pedido</h3>
+<div class="summary"><div class="row"><span>Paquete</span><strong id="chosen">100 diamantes</strong></div><div class="row"><span>ID del jugador</span><strong id="shownId">Pendiente</strong></div><div class="row total"><span>Total</span><strong id="total">Por configurar</strong></div></div>
+<button class="btn" id="review">Preparar pedido</button><div class="status" id="status" role="status"></div>
+<div class="demo"><span>ⓘ</span><span><b>Versión de prueba:</b> esta página todavía no cobra ni realiza recargas. Estamos preparando la conexión con un proveedor reseller y un medio de pago.</span></div>
+<p class="helper">Antes de habilitar ventas reales, verificaremos proveedor, precios, pagos y entrega.</p>
 </aside>
 </div>
-<footer class="footer">© <span id="year"></span> ARIGO RECARGAS · Sitio de demostración</footer>
-</div>
+<section id="como-funciona"><div class="sectionTitle"><div><h2>Compra en pocos pasos</h2><p>Así funcionará tu experiencia en ARIGO STORE.</p></div></div>
+<div class="features"><div class="feature"><span style="font-size:22px">🆔</span><b>1. Ingresa tu ID</b><span>Identifica la cuenta de Free Fire donde deseas recibir la recarga.</span></div><div class="feature"><span style="font-size:22px">💎</span><b>2. Elige tus diamantes</b><span>Selecciona el paquete y revisa el importe antes de continuar.</span></div><div class="feature"><span style="font-size:22px">⚡</span><b>3. Confirma tu pedido</b><span>Cuando se habiliten los pagos y el proveedor, podrás completar la compra.</span></div></div></section>
+<div class="sectionTitle"><div><h2>Preguntas frecuentes</h2><p>Información importante para comprar con confianza.</p></div></div>
+<section class="faq"><details><summary>¿Necesito compartir mi contraseña?</summary><p>No. Para una recarga por ID solo debes ingresar tu identificador de jugador. Nunca compartas contraseñas ni códigos de verificación.</p></details><details><summary>¿Ya puedo comprar diamantes?</summary><p>Aún no. Esta es una versión de demostración. Los pagos y las recargas reales se habilitarán después de integrar y verificar un proveedor legítimo.</p></details><details><summary>¿Cuándo aparecerán los precios?</summary><p>Cuando confirmemos el costo del proveedor y el margen de venta, configuraremos precios en soles.</p></details><details><summary>¿Cómo se entregarán los diamantes?</summary><p>La meta es automatizar la entrega mediante una API autorizada, después de verificar el pago y la disponibilidad del proveedor.</p></details></section>
+</main>
+
+<section id="admin" class="card" style="margin:22px 0">
+  <div class="sectionTitle" style="margin-top:0"><div><h2>Panel administrador</h2><p>Configura precios de muestra desde este navegador.</p></div></div>
+  <div class="demo"><span>ⓘ</span><span><b>Modo demostración:</b> estos ajustes se guardan solo en este navegador. No es un panel privado ni sincroniza precios para otros clientes. Para producción necesitaremos servidor, base de datos y acceso seguro.</span></div>
+  <div class="packages" style="margin-top:16px">
+    <div><label for="admin100">100 diamantes (S/)</label><input class="input admin-price" id="admin100" inputmode="decimal" placeholder="Ej. 4.50"></div>
+    <div><label for="admin310">310 diamantes (S/)</label><input class="input admin-price" id="admin310" inputmode="decimal" placeholder="Ej. 12.00"></div>
+    <div><label for="admin520">520 diamantes (S/)</label><input class="input admin-price" id="admin520" inputmode="decimal" placeholder="Ej. 19.00"></div>
+    <div><label for="admin1060">1060 diamantes (S/)</label><input class="input admin-price" id="admin1060" inputmode="decimal" placeholder="Ej. 36.00"></div>
+  </div>
+  <button class="btn" id="savePrices" style="margin-top:15px">Guardar precios en este dispositivo</button>
+  <div class="status" id="adminStatus" role="status"></div>
+</section>
+
+<footer><div class="wrap"><div class="footbrand">ARIGO STORE</div><p>Recargas Free Fire · Sitio en preparación</p><p>© <span id="year"></span> ARIGO STORE. Todos los derechos reservados.</p></div></footer>
 <script>
-let selected=document.querySelector('.pack.selected');
-const player=document.getElementById('player');
-function update(){document.getElementById('chosen').textContent=selected.dataset.name;document.getElementById('shownId').textContent=player.value.trim()||'Pendiente';document.getElementById('total').textContent=Number(selected.dataset.price)>0?'S/ '+Number(selected.dataset.price).toFixed(2):'Por configurar';}
-document.querySelectorAll('.pack').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.pack').forEach(x=>x.classList.remove('selected'));btn.classList.add('selected');selected=btn;update();}));
-player.addEventListener('input',update);
-document.getElementById('order').addEventListener('click',()=>{const id=player.value.trim();const notice=document.getElementById('notice');notice.style.display='block';if(!/^\d{5,20}$/.test(id)){notice.textContent='Revisa tu ID: escribe entre 5 y 20 números.';notice.style.background='#35151c';notice.style.color='#ffc0c6';return;}notice.style.background='#17291f';notice.style.color='#a9efbf';notice.textContent='Pedido de demostración listo: '+selected.dataset.name+' para el ID '+id+'. Aún no se ha realizado ningún pago ni recarga.';});
-document.getElementById('year').textContent=new Date().getFullYear();update();
+let selected=document.querySelector('.pack.active');const player=document.getElementById('player');
+function refresh(){document.getElementById('chosen').textContent=selected.dataset.name;document.getElementById('shownId').textContent=player.value.trim()||'Pendiente';const price=Number(selected.dataset.price);document.getElementById('total').textContent=price>0?'S/ '+price.toFixed(2):'Por configurar';}
+document.querySelectorAll('.pack').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.pack').forEach(x=>x.classList.remove('active'));btn.classList.add('active');selected=btn;document.getElementById('status').style.display='none';refresh();}));
+player.addEventListener('input',refresh);
+document.getElementById('review').addEventListener('click',()=>{const id=player.value.trim(),box=document.getElementById('status');box.style.display='block';if(!/^\d{5,20}$/.test(id)){box.style.background='#123b29';box.style.color='#a5f5cb';box.textContent='Revisa tu ID: escribe entre 5 y 20 números.';return;}box.style.background='#17281e';box.style.color='#9be6b0';box.textContent='Pedido de prueba preparado: '+selected.dataset.name+' para el ID '+id+'. No se ha realizado ningún pago ni recarga.';});
+
+const priceInputs = [
+  document.getElementById('admin100'),
+  document.getElementById('admin310'),
+  document.getElementById('admin520'),
+  document.getElementById('admin1060')
+];
+const packButtons = Array.from(document.querySelectorAll('.pack'));
+function loadLocalPrices(){
+  try {
+    const saved = JSON.parse(localStorage.getItem('arigo_demo_prices') || 'null');
+    if (Array.isArray(saved) && saved.length === 4) {
+      saved.forEach((v,i) => {
+        if (Number.isFinite(Number(v)) && Number(v) > 0) {
+          priceInputs[i].value = Number(v).toFixed(2);
+          packButtons[i].dataset.price = String(Number(v));
+          packButtons[i].querySelector('.price').textContent = 'S/ ' + Number(v).toFixed(2);
+        }
+      });
+    }
+  } catch(e) {}
+  refresh();
+}
+document.getElementById('savePrices').addEventListener('click', () => {
+  const values = priceInputs.map(input => input.value.trim() === '' ? 0 : Number(input.value.replace(',', '.')));
+  const status = document.getElementById('adminStatus');
+  if (values.some(v => !Number.isFinite(v) || v < 0)) {
+    status.style.display='block'; status.style.background='#35151c'; status.style.color='#ffc0c6';
+    status.textContent='Revisa los importes. Usa números positivos, por ejemplo 5.50.'; return;
+  }
+  try {
+    localStorage.setItem('arigo_demo_prices', JSON.stringify(values));
+    values.forEach((v,i) => {
+      packButtons[i].dataset.price = String(v);
+      packButtons[i].querySelector('.price').textContent = v > 0 ? 'S/ ' + v.toFixed(2) : 'Precio por configurar';
+    });
+    refresh();
+    status.style.display='block'; status.style.background='#17281e'; status.style.color='#9be6b0';
+    status.textContent='Precios guardados en este navegador. Recuerda: todavía no se publican para otros clientes.';
+  } catch(e) {
+    status.style.display='block'; status.style.background='#35151c'; status.style.color='#ffc0c6';
+    status.textContent='Este navegador no permitió guardar los cambios.';
+  }
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+loadLocalPrices();
+
 </script>
 </body></html>
