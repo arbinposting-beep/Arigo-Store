@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101014">
+<title>ARIGO STORE | Recargas Free Fire</title>
+<style>
+:root{--bg:#0d0d11;--panel:#17171e;--panel2:#20202a;--red:#ed2638;--muted:#a8a8b3;--white:#f7f7fb}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 0%,#3b1119 0,transparent 32%),var(--bg);color:var(--white);font-family:Inter,system-ui,Arial,sans-serif}
+.wrap{max-width:980px;margin:auto;padding:20px}.nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0 22px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:2px;font-size:23px}.mark{background:var(--red);width:38px;height:38px;display:grid;place-items:center;border-radius:11px;font-size:24px;font-weight:900}.tag{font-size:11px;color:#ff9ca5;border:1px solid #70232d;border-radius:99px;padding:7px 10px}
+.hero{padding:32px 24px;border:1px solid #33313b;border-radius:22px;background:linear-gradient(120deg,#21151b,#17171e 58%,#241016);overflow:hidden}.eyebrow{color:#ff7b88;font-weight:800;font-size:12px;letter-spacing:2px}.hero h1{font-size:clamp(30px,6vw,52px);line-height:1.02;margin:12px 0}.hero p{color:#c5c3cc;max-width:520px;line-height:1.6}.hero .diamond{font-size:46px;float:right;margin:10px 4% 0 10px;filter:drop-shadow(0 8px 18px #007cff66)}
+.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-top:18px}.panel{background:var(--panel);border:1px solid #2e2d37;border-radius:18px;padding:20px}.panel h2{font-size:18px;margin:0 0 16px}.field{margin:13px 0}.field label{display:block;font-size:13px;color:#d9d8df;margin-bottom:8px}.field input{width:100%;padding:14px;border-radius:11px;border:1px solid #3a3944;background:#101016;color:white;font-size:16px;outline:none}.field input:focus{border-color:var(--red)}.packs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.pack{background:var(--panel2);border:1px solid #383742;border-radius:13px;padding:14px;text-align:left;color:white;cursor:pointer}.pack strong{display:block;font-size:16px}.pack small{display:block;color:#aaa8b3;margin-top:6px}.pack.selected{border:1px solid var(--red);background:#35151c;box-shadow:0 0 0 1px #ed263844}.btn{width:100%;border:0;background:var(--red);color:white;padding:15px;border-radius:12px;font-weight:800;font-size:15px;cursor:pointer;margin-top:14px}.btn:disabled{opacity:.45;cursor:not-allowed}.hint{font-size:12px;color:var(--muted);line-height:1.5}.summary{background:#101016;border-radius:12px;padding:14px;margin:14px 0}.line{display:flex;justify-content:space-between;gap:12px;margin:9px 0;color:#c8c6d0;font-size:14px}.line.total{border-top:1px solid #35333d;padding-top:12px;color:white;font-weight:800;font-size:17px}.notice{display:none;padding:12px;border-radius:10px;background:#17291f;color:#a9efbf;font-size:13px;margin-top:12px}.footer{text-align:center;color:#777681;font-size:12px;padding:24px 0}.warning{color:#f2c2c6}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.hero{padding:25px 19px}.wrap{padding:14px}.panel{padding:17px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="nav"><div class="brand"><span class="mark">A</span> ARIGO STORE</div><span class="tag">RECARGAS FREE FIRE</span></header>
+<section class="hero"><span class="diamond">💎</span><div class="eyebrow">TU TIENDA GAMING</div><h1>RECARGA TUS<br>DIAMANTES</h1><p>Elige tu paquete, ingresa tu ID de jugador y revisa tu pedido. Estamos preparando nuestro sistema de recargas.</p></section>
+<div class="grid">
+<section class="panel">
+<h2>1. Datos del jugador</h2>
+<div class="field"><label for="player">ID de jugador de Free Fire</label><input id="player" inputmode="numeric" maxlength="20" placeholder="Ejemplo: 123456789"></div>
+<p class="hint">Ingresa únicamente tu ID de jugador. Nunca compartas tu contraseña ni códigos de acceso.</p>
+<h2 style="margin-top:24px">2. Selecciona tus diamantes</h2>
+<div class="packs" id="packs">
+<button class="pack selected" data-name="100 diamantes" data-price="0"><strong>💎 100 diamantes</strong><small>Precio por configurar</small></button>
+<button class="pack" data-name="310 diamantes" data-price="0"><strong>💎 310 diamantes</strong><small>Precio por configurar</small></button>
+<button class="pack" data-name="520 diamantes" data-price="0"><strong>💎 520 diamantes</strong><small>Precio por configurar</small></button>
+<button class="pack" data-name="1060 diamantes" data-price="0"><strong>💎 1060 diamantes</strong><small>Precio por configurar</small></button>
+</div>
+</section>
+<aside class="panel">
+<h2>Resumen del pedido</h2>
+<div class="summary"><div class="line"><span>Paquete</span><strong id="chosen">100 diamantes</strong></div><div class="line"><span>ID jugador</span><strong id="shownId">Pendiente</strong></div><div class="line total"><span>Total</span><strong id="total">Por configurar</strong></div></div>
+<p class="hint warning">Modo de demostración: todavía no se reciben pagos ni se realizan recargas reales.</p>
+<button class="btn" id="order">Revisar pedido</button><div class="notice" id="notice"></div>
+<p class="hint">Cuando conectemos un proveedor reseller legítimo y un medio de pago, habilitaremos las compras reales y la entrega automática.</p>
+</aside>
+</div>
+<footer class="footer">© <span id="year"></span> ARIGO RECARGAS · Sitio de demostración</footer>
+</div>
+<script>
+let selected=document.querySelector('.pack.selected');
+const player=document.getElementById('player');
+function update(){document.getElementById('chosen').textContent=selected.dataset.name;document.getElementById('shownId').textContent=player.value.trim()||'Pendiente';document.getElementById('total').textContent=Number(selected.dataset.price)>0?'S/ '+Number(selected.dataset.price).toFixed(2):'Por configurar';}
+document.querySelectorAll('.pack').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.pack').forEach(x=>x.classList.remove('selected'));btn.classList.add('selected');selected=btn;update();}));
+player.addEventListener('input',update);
+document.getElementById('order').addEventListener('click',()=>{const id=player.value.trim();const notice=document.getElementById('notice');notice.style.display='block';if(!/^\d{5,20}$/.test(id)){notice.textContent='Revisa tu ID: escribe entre 5 y 20 números.';notice.style.background='#35151c';notice.style.color='#ffc0c6';return;}notice.style.background='#17291f';notice.style.color='#a9efbf';notice.textContent='Pedido de demostración listo: '+selected.dataset.name+' para el ID '+id+'. Aún no se ha realizado ningún pago ni recarga.';});
+document.getElementById('year').textContent=new Date().getFullYear();update();
+</script>
+</body></html>
